@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+    
+    <nav class="flex justify-between items-center px-6 pt-4">
+        <a href="#" class="flex items-center gap-4">
+            <img src="./logo.png" alt="Logo">
+            <span class="font-medium text-2xl font-sans">Love Code</span>
+        </a>
+
+        <!-- Desktop Menu -->
+        <div id="nav-menu" class="hidden md:flex md:gap-8">
+            <a href="#" class="hover:text-blue-500 font-medium">Home</a>
+            <a href="#" class="hover:text-blue-500 font-medium">Products</a>
+            <a href="#" class="hover:text-blue-500 font-medium">Blog</a>
+            <a href="#" class="hover:text-blue-500 font-medium">Community</a>
+        </div>
+
+        <button class="hidden md:block px-4 py-2 border-2 border-blue-500 hover:border-none hover:bg-blue-400 transition-all duration-300 hover:text-white rounded-full">
+            Get Started
+        </button>
+
+        <!-- Hamburger Icon for Mobile -->
+        <button id="hamburger-icon" class="md:hidden">
+            <i class="fa-solid fa-bars text-2xl text-gray-600"></i>
+        </button>
+
+        <!-- Mobile Menu -->
+        <div id="nav-dialogue" class="hidden fixed bg-white inset-0 px-6 pt-4 md:hidden">
+            <div id="nav-bar" class="flex justify-between items-center">
+                <a href="#" class="flex items-center gap-4">
+                    <img src="./logo.png" alt="Logo">
+                    <span class="font-medium text-2xl font-sans">Love Code</span>
+                </a>
+                <button id="close-icon">
+                    <i class="fa-solid fa-x text-2xl text-gray-600"></i>
+                </button>
+            </div>
+
+            <div class="mt-6 flex flex-col border-b-[1px]">
+                <a href="#" class="py-2 pl-2 rounded hover:bg-gray-200">Home</a>
+                <a href="#" class="py-2 pl-2 rounded hover:bg-gray-200">Products</a>
+                <a href="#" class="py-2 pl-2 rounded hover:bg-gray-200">Blog</a>
+                <a href="#" class="py-2 pl-2 rounded hover:bg-gray-200">Community</a>
+            </div>
+
+            <button class="ml-2 mt-4 px-4 py-2 border-none bg-blue-400 transition-all duration-300 hover:text-white rounded-sm">
+                Get Started
+            </button>
+        </div>
+    </nav>
+    
+    <script>
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const closeIcon = document.getElementById('close-icon');
+        const mobileMenu = document.getElementById('nav-dialogue');
+        
+        // Function to toggle the mobile menu
+        function handleMenu() {
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        hamburgerIcon.addEventListener('click', handleMenu);
+        closeIcon.addEventListener('click', handleMenu);
+    </script>
+    
+</body>
+</html>
