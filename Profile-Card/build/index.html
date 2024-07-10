@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwindcss</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- Card Container  -->
+    <div
+      class="mx-auto my-10 max-w-xs flex flex-col items-center rounded-xl border p-4 text-center md:max-w-lg md:flex-row md:items-start md:text-left"
+    >
+      <!-- Image Container  -->
+      <div class="mb-4 md:mr-6 md:mb-0">
+        <img
+          class="h-56 w-full rounded-lg object-cover md:w-56"
+          src="./img/or.avif"
+          alt="James Edward Image"
+        />
+      </div>
+
+      <!-- Card Text  -->
+      <div>
+        <!-- Heading  -->
+        <div>
+          <h3 class="text-xl font-medium text-gray-700">James Edward</h3>
+          <p class="mb-4 text-sm font-medium text-gray-500">Senior Editor</p>
+        </div>
+        <!-- Social Media Statistics  -->
+        <div class="flex gap-2 mb-3">
+          <div class="text-center rounded-xl bg-gray-100 px-4 py-2">
+            <p class="text-sm font-medium text-gray-500">Articles</p>
+            <p class="text-3xl font-medium text-gray-600">13</p>
+          </div>
+          <div class="text-center rounded-xl bg-gray-100 px-4 py-2">
+            <p class="text-sm font-medium text-gray-500">Papers</p>
+            <p class="text-3xl font-medium text-gray-600">7</p>
+          </div>
+          <div class="text-center rounded-xl bg-gray-100 px-4 py-2">
+            <p class="text-sm font-medium text-gray-500">Followers</p>
+            <p class="text-3xl font-medium text-gray-600">2.5k</p>
+          </div>
+        </div>
+<!-- Buttons  -->
+        <div class="flex gap-2">
+            <button class="w-full outline-none font-medium border-2 text-gray-500 rounded-lg px-4 py-2 hover:bg-blue-600 hover:border-transparent hover:text-white transition">Message</button>
+            <button class="w-full outline-none font-medium text-white rounded-lg px-4 py-2 bg-blue-600 border-transparent border-2 hover:border-2 hover:border-gray-500 hover:bg-transparent hover:text-gray-500 transition">Follow</button>
+            
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
